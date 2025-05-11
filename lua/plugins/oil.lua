@@ -11,7 +11,7 @@ return {
   keys = {
     {
       "-",
-      "<CMD>Oil<CR>",
+      "<cmd>Oil<cr>",
     },
   }
 }
