@@ -380,7 +380,9 @@ return {
         },
       })
 
-      vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
+      vim.keymap.set("n", "<leader>tt", "<Cmd>Neotree toggle<CR>")
+      vim.keymap.set("n", "<leader>tf", "<Cmd>Neotree focus<CR>")
+
     end,
   },
 }
