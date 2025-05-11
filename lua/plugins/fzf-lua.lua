@@ -22,11 +22,6 @@ return {
       desc="Grep files in current directory",
     },
     {
-      "<leader>fb",
-      function() require("fzf-lua").buffers() end,
-      desc="Find existing buffers",
-    },
-    {
       "<leader>gb",
       function() require("fzf-lua").lgrep_curbuf() end,
       desc="Grep current buffer",
