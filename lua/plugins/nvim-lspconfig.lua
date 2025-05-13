@@ -16,7 +16,7 @@ return {
         vim.keymap.set("n", "gr", require("fzf-lua").lsp_references, {desc="Goto references"})
         vim.keymap.set("n", "gI", require("fzf-lua").lsp_implementations, {desc="Goto implementation"})
         vim.keymap.set("n", "<leader>D", require("fzf-lua").lsp_typedefs, {desc="Type definition"})
-        vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {desc="Rename"})
+        vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename, {desc="Rename"})
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {desc="Code action"})
         vim.keymap.set("n", "gD", vim.lsp.buf.code_action, {desc="Goto declaration"})
       end,

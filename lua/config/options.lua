@@ -34,10 +34,3 @@ vim.opt.signcolumn = "yes"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.diagnostic.config({
-  virtual_text = false,      -- Show inline messages
-  signs = true,             -- Show signs in the gutter
-  underline = true,         -- Underline problem text
-  update_in_insert = false,
-  severity_sort = true,
-})
