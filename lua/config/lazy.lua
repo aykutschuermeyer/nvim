@@ -28,8 +28,14 @@ require("lazy").setup({
     { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "bamboo" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+-- require("bamboo").setup {
+--   style = "light"
+-- }
+
+vim.opt.background = "dark"
+vim.cmd("colorscheme oxocarbon")
+
