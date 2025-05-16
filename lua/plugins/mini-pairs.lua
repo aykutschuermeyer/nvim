@@ -2,6 +2,6 @@ return {
   "echasnovski/mini.pairs",
   version = "*",
   config = function()
-    require('mini.pairs').setup()
+    require("mini.pairs").setup()
   end,
 }
