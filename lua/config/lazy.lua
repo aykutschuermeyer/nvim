@@ -32,10 +32,6 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
--- require("bamboo").setup {
---   style = "light"
--- }
-
 vim.opt.background = "dark"
 vim.cmd("colorscheme oxocarbon")
 
