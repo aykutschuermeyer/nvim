@@ -12,13 +12,13 @@ return {
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
       callback = function(event)
-        vim.keymap.set("n", "gd", require("fzf-lua").lsp_definitions, { desc = "Goto definition" })
-        vim.keymap.set("n", "gr", require("fzf-lua").lsp_references, { desc = "Goto references" })
-        vim.keymap.set("n", "gI", require("fzf-lua").lsp_implementations, { desc = "Goto implementation" })
-        vim.keymap.set("n", "<leader>D", require("fzf-lua").lsp_typedefs, { desc = "Type definition" })
-        vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename, { desc = "Rename" })
+        vim.keymap.set("n", "<leader>gd", require("fzf-lua").lsp_definitions, { desc = "Goto definition" })
+        vim.keymap.set("n", "<leader>gr", require("fzf-lua").lsp_references, { desc = "Goto references" })
+        vim.keymap.set("n", "<leader>gi", require("fzf-lua").lsp_implementations, { desc = "Goto implementation" })
+        vim.keymap.set("n", "<leader>td", require("fzf-lua").lsp_typedefs, { desc = "Type definition" })
+        vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename, { desc = "Rename all" })
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
-        vim.keymap.set("n", "gD", vim.lsp.buf.code_action, { desc = "Goto declaration" })
+        vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Goto declaration" })
       end,
     })
 
