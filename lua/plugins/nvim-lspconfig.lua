@@ -39,13 +39,17 @@ return {
     local original_capabilities = vim.lsp.protocol.make_client_capabilities()
     local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
 
-    local servers = {
-      lua_ls = {},
-      rust_analyzer = {},
-      stylua = {},
+    require("mason-tool-installer").setup {
+      ensure_installed = {
+        "black",
+        "isort",
+        "lua-language-server",
+        "pyright",
+        "rust-analyzer",
+        "stylua",
+        "typescript-language-server",
+      },
     }
-    local ensure_installed = vim.tbl_keys(servers or {})
-    require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
     require("mason-lspconfig").setup {
       ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
