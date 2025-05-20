@@ -1,5 +1,9 @@
 return {
   "olimorris/codecompanion.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  },
   opts = {
     strategies = {
       chat = {
@@ -10,8 +14,12 @@ return {
       },
     },
   },
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
+  keys = {
+    {
+      "<leader>cc",
+      "<cmd>CodeCompanionChat toggle<cr>",
+      mode = "n",
+      desc = "CodeCompanion toggle chat",
+    },
   },
 }
