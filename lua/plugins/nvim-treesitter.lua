@@ -5,15 +5,15 @@ return {
     local configs = require "nvim-treesitter.configs"
     configs.setup {
       ensure_installed = {
+        "css",
+        "html",
+        "javascript",
         "lua",
+        "query",
+        "rust",
+        "typescript",
         "vim",
         "vimdoc",
-        "query",
-        "javascript",
-        "html",
-        "css",
-        "typescript",
-        "rust",
       },
       sync_install = false,
       highlight = { enable = true },

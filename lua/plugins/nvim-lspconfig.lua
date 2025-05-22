@@ -41,11 +41,10 @@ return {
 
     require("mason-tool-installer").setup {
       ensure_installed = {
-        "black",
         "codelldb",
-        "isort",
         "lua-language-server",
         "pyright",
+        "ruff",
         "rust-analyzer",
         "stylua",
         "typescript-language-server",
