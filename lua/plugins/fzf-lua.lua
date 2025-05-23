@@ -30,5 +30,19 @@ return {
       end,
       desc = "Grep current buffer",
     },
+    {
+      "<leader><leader>",
+      function()
+        require("fzf-lua").buffers()
+      end,
+      desc = "Find buffers",
+    },
+    {
+      "<leader>fk",
+      function()
+        require("fzf-lua").keymaps()
+      end,
+      desc = "Find keymaps",
+    },
   },
 }
