@@ -38,11 +38,11 @@ return {
       desc = "Find buffers",
     },
     {
-      "<leader>fk",
+      "<leader>gg",
       function()
-        require("fzf-lua").keymaps()
+        require("fzf-lua").git_status()
       end,
-      desc = "Find keymaps",
+      desc = "Show git status with differences",
     },
   },
 }
