@@ -32,4 +32,4 @@ require("lazy").setup {
 }
 
 vim.opt.background = "dark"
-vim.cmd "colorscheme vscode"
+vim.cmd "colorscheme bamboo"
