@@ -1,6 +1,11 @@
 return {
   "ibhagwan/fzf-lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  opts = {
+    fzf_colors = {
+      ["gutter"] = { "bg", "Normal" },
+    },
+  },
   keys = {
     {
       "<leader>ff",

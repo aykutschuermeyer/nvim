@@ -7,6 +7,8 @@ vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true -- Keep identation from previous line
 
+vim.opt.wrap = false -- Disable line wrap
+
 -- Enable break indent
 vim.opt.breakindent = true
 
