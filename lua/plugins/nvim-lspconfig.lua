@@ -42,7 +42,10 @@ return {
 
     require("mason-tool-installer").setup {
       ensure_installed = {
+        "clang-format",
+        "clangd",
         "codelldb",
+        "js-debug-adapter",
         "lua-language-server",
         "pyright",
         "ruff",

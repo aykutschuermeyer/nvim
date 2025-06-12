@@ -5,6 +5,7 @@ return {
       rust = { "rustfmt" },
       lua = { "stylua" },
       python = { "ruff_organize_imports", "ruff_format" },
+      cpp = { "clang-format" },
       typescript = { "prettierd", "prettier" },
     },
     format_on_save = {

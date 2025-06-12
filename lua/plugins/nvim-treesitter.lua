@@ -5,6 +5,8 @@ return {
     local configs = require "nvim-treesitter.configs"
     configs.setup {
       ensure_installed = {
+        "c",
+        "cpp",
         "css",
         "html",
         "javascript",
@@ -12,6 +14,7 @@ return {
         "query",
         "rust",
         "typescript",
+        "tsx",
         "vim",
         "vimdoc",
       },
