@@ -5,6 +5,9 @@ return {
     fzf_colors = {
       ["gutter"] = { "bg", "Normal" },
     },
+    winopts = {
+      fullscreen = true,
+    },
   },
   keys = {
     {
