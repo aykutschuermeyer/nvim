@@ -29,6 +29,13 @@ return {
       end,
       desc = "Debug step into",
     },
+    {
+      "<leader>dc",
+      function()
+        require("dap").repl.toggle()
+      end,
+      desc = "Toggle debug console",
+    },
   },
   config = function()
     local dap = require "dap"
