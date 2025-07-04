@@ -44,7 +44,7 @@ return {
       desc = "Debug go down the call stack",
     },
     {
-      "<C-f5>",
+      "<leader>Dr",
       function()
         require("dap").restart()
       end,
