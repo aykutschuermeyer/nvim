@@ -9,32 +9,53 @@ return {
       desc = "Debug continue",
     },
     {
-      "<f9>",
-      function()
-        require("dap").toggle_breakpoint()
-      end,
-      desc = "Debug toggle breakpoint",
-    },
-    {
-      "<f10>",
+      "<f6>",
       function()
         require("dap").step_over()
       end,
       desc = "Debug step over",
     },
     {
-      "<f11>",
+      "<f7>",
       function()
         require("dap").step_into()
       end,
       desc = "Debug step into",
     },
     {
-      "<leader>dc",
+      "<f8>",
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      desc = "Debug toggle breakpoint",
+    },
+    {
+      "<f9>",
+      function()
+        require("dap").up()
+      end,
+      desc = "Debug go up the call stack",
+    },
+    {
+      "<f10>",
+      function()
+        require("dap").down()
+      end,
+      desc = "Debug go down the call stack",
+    },
+    {
+      "<leader>Dc",
       function()
         require("dap").repl.toggle()
       end,
-      desc = "Toggle debug console",
+      desc = "Debug toggle console",
+    },
+    {
+      "<leader>Dx",
+      function()
+        require("dap").clear_breakpoints()
+      end,
+      desc = "Debug clear breakpoints",
     },
   },
   config = function()
