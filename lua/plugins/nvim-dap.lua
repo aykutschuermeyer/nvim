@@ -44,6 +44,13 @@ return {
       desc = "Debug go down the call stack",
     },
     {
+      "<C-f5>",
+      function()
+        require("dap").restart()
+      end,
+      desc = "Debug restart",
+    },
+    {
       "<leader>Dc",
       function()
         require("dap").repl.toggle()
