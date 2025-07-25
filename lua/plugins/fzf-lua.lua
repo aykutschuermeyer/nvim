@@ -1,6 +1,21 @@
 return {
   "ibhagwan/fzf-lua",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    {
+      "igorlfs/nvim-dap-view",
+      ---@module 'dap-view'
+      ---@type dapview.Config
+      opts = {},
+      keys = {
+        {
+          "<leader>DD",
+          "<cmd>DapViewToggle<cr>",
+          desc = "Debug toggle view",
+        },
+      },
+    },
+  },
   opts = {
     fzf_colors = {
       ["gutter"] = { "bg", "Normal" },
@@ -32,11 +47,11 @@ return {
       desc = "Grep files in current directory",
     },
     {
-      "<leader>gb",
+      "<leader>gg",
       function()
-        require("fzf-lua").lgrep_curbuf()
+        require("fzf-lua").git_status()
       end,
-      desc = "Grep current buffer",
+      desc = "Show git status with differences",
     },
     {
       "<leader><leader>",
@@ -44,13 +59,6 @@ return {
         require("fzf-lua").buffers()
       end,
       desc = "Find buffers",
-    },
-    {
-      "<leader>gg",
-      function()
-        require("fzf-lua").git_status()
-      end,
-      desc = "Show git status with differences",
     },
   },
 }

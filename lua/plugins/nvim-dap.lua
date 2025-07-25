@@ -1,6 +1,35 @@
 return {
   "mfussenegger/nvim-dap",
+  dependencies = {
+    {
+      "igorlfs/nvim-dap-view",
+      ---@module 'dap-view'
+      ---@type dapview.Config
+      opts = {},
+      keys = {
+        {
+          "<leader>DD",
+          "<cmd>DapViewToggle<cr>",
+          desc = "Debug toggle view",
+        },
+      },
+    },
+  },
   keys = {
+    {
+      "<f3>",
+      function()
+        require("dap").clear_breakpoints()
+      end,
+      desc = "Debug clear breakpoints",
+    },
+    {
+      "<f4>",
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      desc = "Debug toggle breakpoint",
+    },
     {
       "<f5>",
       function()
@@ -11,9 +40,9 @@ return {
     {
       "<f6>",
       function()
-        require("dap").step_over()
+        require("dap").restart()
       end,
-      desc = "Debug step over",
+      desc = "Debug restart",
     },
     {
       "<f7>",
@@ -25,44 +54,23 @@ return {
     {
       "<f8>",
       function()
-        require("dap").toggle_breakpoint()
+        require("dap").step_over()
       end,
-      desc = "Debug toggle breakpoint",
+      desc = "Debug step over",
     },
     {
       "<f9>",
-      function()
-        require("dap").up()
-      end,
-      desc = "Debug go up the call stack",
-    },
-    {
-      "<f10>",
       function()
         require("dap").down()
       end,
       desc = "Debug go down the call stack",
     },
     {
-      "<leader>Dr",
+      "<f10>",
       function()
-        require("dap").restart()
+        require("dap").up()
       end,
-      desc = "Debug restart",
-    },
-    {
-      "<leader>Dc",
-      function()
-        require("dap").repl.toggle()
-      end,
-      desc = "Debug toggle console",
-    },
-    {
-      "<leader>Dx",
-      function()
-        require("dap").clear_breakpoints()
-      end,
-      desc = "Debug clear breakpoints",
+      desc = "Debug go up the call stack",
     },
   },
   config = function()
