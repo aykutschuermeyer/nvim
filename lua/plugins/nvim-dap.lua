@@ -75,6 +75,21 @@ return {
   },
   config = function()
     local dap = require "dap"
+    local dapview = require "dap-view"
+
+    -- Autostart Dap View
+    dap.listeners.before.attach.dapview_config = function()
+      dapview.open()
+    end
+    dap.listeners.before.launch.dapview_config = function()
+      dapview.open()
+    end
+    dap.listeners.before.event_terminated.dapview_config = function()
+      dapview.close()
+    end
+    dap.listeners.before.event_exited.dapview_config = function()
+      dapview.close()
+    end
 
     -- Node.js adapter configuration
     dap.adapters.node2 = {
