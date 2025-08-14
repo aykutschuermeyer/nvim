@@ -6,6 +6,7 @@ return {
     "antoinemadec/fixcursorhold.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-neotest/neotest-jest",
+    "rouge8/neotest-rust",
   },
   config = function()
     require("neotest").setup {
@@ -18,6 +19,7 @@ return {
             return vim.fn.getcwd()
           end,
         },
+        require "neotest-rust" {},
       },
     }
   end,
