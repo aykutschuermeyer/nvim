@@ -12,6 +12,13 @@ return {
       dap = {
         adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
       },
+      server = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = false,
+          },
+        },
+      },
     }
   end,
 }
