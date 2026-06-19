@@ -11,6 +11,7 @@ return {
         "html",
         "javascript",
         "lua",
+        "markdown",
         "query",
         "rust",
         "typescript",
